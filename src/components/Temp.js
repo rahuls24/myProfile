@@ -10,6 +10,7 @@ import FacebookIcon from '@material-ui/icons/Facebook';
 import PhoneIphoneIcon from '@material-ui/icons/PhoneIphone';
 import WhatsAppIcon from '@material-ui/icons/WhatsApp';
 import EmailIcon from '@material-ui/icons/Email';
+import Grid from '@material-ui/core/Grid';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -65,9 +66,9 @@ export default function Contact() {
         className={classes.temp1}
         style={{ marginLeft: '-5%' }}
       >
-        <Typography>
+        <Typography style={{ marginLeft: '2%' }}>
           <Typography variant='h5'>Silicon Institute of Technology</Typography>
-          <Typography variant='h5'> Bhubaneswar-751024, India</Typography>
+          <Typography variant='h5'>Bhubaneswar-751024, India</Typography>
         </Typography>
         <span style={{ marginLeft: '14%' }}>
           <LinkedInIcon fontSize='large' />
@@ -89,6 +90,17 @@ export default function Contact() {
           <WhatsAppIcon fontSize='large' />
           <Typography variant='h5'>+917992302811</Typography>
         </span>
+      </Typography>
+
+      <EmailIcon
+        fontSize='large'
+        style={{ color: '#fff', marginLeft: '80%' }}
+      />
+      <Typography
+        style={{ marginTop: '-2.3%', marginLeft: '83%', color: '#fff' }}
+        variant='h6'
+      >
+        rahul080924@outlook.com
       </Typography>
     </Paper>
   );

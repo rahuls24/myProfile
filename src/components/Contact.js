@@ -10,30 +10,20 @@ import FacebookIcon from '@material-ui/icons/Facebook';
 import PhoneIphoneIcon from '@material-ui/icons/PhoneIphone';
 import WhatsAppIcon from '@material-ui/icons/WhatsApp';
 import EmailIcon from '@material-ui/icons/Email';
+import Grid from '@material-ui/core/Grid';
 
 const useStyles = makeStyles(theme => ({
   root: {
-    padding: theme.spacing(3, 2),
-    minWidth: 275,
-    minHeight: 375,
-    backgroundColor: '#6AB04A'
+    flexGrow: 1,
+    backgroundColor: '#000000'
   },
-  temp: {
-    display: 'flex',
-    flexWrap: 'wrap',
-    justifyContent: 'space-around',
-    overflow: 'hidden',
+  paper: {
+    padding: theme.spacing(2),
+    textAlign: 'center',
     color: '#fff',
-    marginTop: '4%'
+    backgroundColor: '#000000'
   },
-  temp1: {
-    display: 'flex',
-    flexWrap: 'wrap',
-    justifyContent: 'space-around',
-    overflow: 'hidden',
-    color: '#fff',
-    marginTop: '1%'
-  },
+
   title: {
     display: 'flex',
     flexWrap: 'wrap',
@@ -46,61 +36,64 @@ export default function Contact() {
   const classes = useStyles();
 
   return (
-    <Paper className={classes.root}>
-      <Typography
-        variant='h3'
-        className={classes.title}
-        style={{ color: '#fff' }}
+    <div className={classes.root}>
+      <Grid
+        container
+        direction='row'
+        justify='flex-start'
+        alignItems='flex-start'
       >
-        CONTACT
-      </Typography>
-      <Typography variant='h5' className={classes.temp}>
-        <Typography variant='h5'> ADDRESS</Typography>
-        <Typography variant='h5'>AROUND THE WEB</Typography>
-        <Typography variant='h5'> URGENT</Typography>
-      </Typography>
-      <Divider />
-      <Typography
-        variant='h5'
-        className={classes.temp1}
-        style={{ marginLeft: '-5%' }}
+        <Grid item xs={12}>
+          <Typography
+            variant='h3'
+            className={classes.title}
+            style={{ color: '#fff' }}
+          >
+            CONTACT
+          </Typography>
+        </Grid>
+      </Grid>
+      <Grid
+        spacing={3}
+        container
+        direction='row'
+        justify='space-around'
+        alignItems='center'
       >
-        <Typography style={{ marginLeft: '2%' }}>
-          <Typography variant='h5'>Silicon Institute of Technology</Typography>
-          <Typography variant='h5'>Bhubaneswar-751024, India</Typography>
-        </Typography>
-        <span style={{ marginLeft: '14%' }}>
-          <LinkedInIcon fontSize='large' />
-          <GitHubIcon fontSize='large' />
-          <FacebookIcon fontSize='large' />
-          <InstagramIcon fontSize='large' />
-        </span>
-
-        <span
-          style={{
-            display: 'flex',
-            flexWrap: 'wrap',
-            justifyContent: 'space-around',
-            overflow: 'hidden',
-            marginLeft: '14%'
-          }}
-        >
-          <PhoneIphoneIcon fontSize='large' />
-          <WhatsAppIcon fontSize='large' />
-          <Typography variant='h5'>+917992302811</Typography>
-        </span>
-      </Typography>
-
-      <EmailIcon
-        fontSize='large'
-        style={{ color: '#fff', marginLeft: '80%' }}
-      />
-      <Typography
-        style={{ marginTop: '-2.3%', marginLeft: '83%', color: '#fff' }}
-        variant='h6'
-      >
-        rahul080924@outlook.com
-      </Typography>
-    </Paper>
+        <Grid item xs={12} sm={4}>
+          <Paper className={classes.paper}>
+            <Typography variant='h5'> ADDRESS</Typography>
+            <Typography variant='h6'>
+              Silicon Institute of Technology
+            </Typography>
+            <Typography variant='h6'> Bhubaneswar-751024, India</Typography>
+          </Paper>
+        </Grid>
+        <Grid item xs={12} sm={4}>
+          <Paper className={classes.paper}>
+            <Typography variant='h5'> AROUND THE WEB</Typography>
+            <span style={{}}>
+              <LinkedInIcon fontSize='large' />
+              <GitHubIcon fontSize='large' />
+              <FacebookIcon fontSize='large' />
+              <InstagramIcon fontSize='large' />
+            </span>
+          </Paper>
+        </Grid>
+        <Grid item xs={12} sm={4}>
+          <Paper className={classes.paper}>
+            <Typography variant='h5'> URGENT</Typography>
+            <span>
+              <PhoneIphoneIcon fontSize='large' />
+              <WhatsAppIcon fontSize='large' />
+              +917992302811
+            </span>
+            <Typography></Typography>
+            <EmailIcon fontSize='large' style={{ marginLeft: '11%' }} />
+            rahul080924@outlook.com
+          </Paper>
+        </Grid>
+      </Grid>
+    </div>
   );
 }

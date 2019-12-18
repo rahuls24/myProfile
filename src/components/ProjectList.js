@@ -80,7 +80,11 @@ export default function ProjectList() {
 
   return (
     <div className={classes.root}>
-      <GridList cellHeight={180} className={classes.gridList}>
+      <GridList
+        cellHeight={180}
+        className={classes.gridList}
+     
+      >
         <GridListTile
           key='Subheader'
           cols={2}
