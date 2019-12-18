@@ -108,7 +108,7 @@ export default function Contact() {
       </Grid>
       <Grid container>
         <Grid item xs={12}>
-          <Paper className={classes.paper} style={{}}>
+          <Paper className={classes.paper1} style={{}}>
             <Button
               variant='contained'
               color='default'
