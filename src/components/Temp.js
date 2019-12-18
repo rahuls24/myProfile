@@ -1,39 +1,31 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import Paper from '@material-ui/core/Paper';
+import Card from '@material-ui/core/Card';
+import CardActions from '@material-ui/core/CardActions';
+import CardContent from '@material-ui/core/CardContent';
+import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
-import Divider from '@material-ui/core/Divider';
-import LinkedInIcon from '@material-ui/icons/LinkedIn';
-import InstagramIcon from '@material-ui/icons/Instagram';
-import GitHubIcon from '@material-ui/icons/GitHub';
-import FacebookIcon from '@material-ui/icons/Facebook';
-import PhoneIphoneIcon from '@material-ui/icons/PhoneIphone';
-import WhatsAppIcon from '@material-ui/icons/WhatsApp';
-import EmailIcon from '@material-ui/icons/Email';
-import Grid from '@material-ui/core/Grid';
+import GetAppIcon from '@material-ui/icons/GetApp';
 
-const useStyles = makeStyles(theme => ({
-  root: {
-    padding: theme.spacing(3, 2),
+const useStyles = makeStyles({
+  card: {
     minWidth: 275,
     minHeight: 375,
     backgroundColor: '#6AB04A'
   },
-  temp: {
-    display: 'flex',
-    flexWrap: 'wrap',
-    justifyContent: 'space-around',
-    overflow: 'hidden',
+  btn: {
+    backgroundColor: '#6AB04A',
+    border: '2px solid',
     color: '#fff',
-    marginTop: '4%'
-  },
-  temp1: {
-    display: 'flex',
-    flexWrap: 'wrap',
-    justifyContent: 'space-around',
-    overflow: 'hidden',
-    color: '#fff',
-    marginTop: '1%'
+    '&:hover': {
+      backgroundColor: '#45CE30',
+      color: '#ffffff'
+    },
+    // marginTop: '2%',
+    // marginLeft: '40%',
+    margin: 'auto',
+    paddingTop: 12,
+    paddingBottom: 12
   },
   title: {
     display: 'flex',
@@ -41,67 +33,50 @@ const useStyles = makeStyles(theme => ({
     justifyContent: 'space-around',
     overflow: 'hidden'
   }
-}));
+});
 
-export default function Contact() {
+export default function MyAbout() {
   const classes = useStyles();
 
   return (
-    <Paper className={classes.root}>
-      <Typography
-        variant='h3'
-        className={classes.title}
-        style={{ color: '#fff' }}
-      >
-        CONTACT
-      </Typography>
-      <Typography variant='h5' className={classes.temp}>
-        <Typography variant='h5'> ADDRESS</Typography>
-        <Typography variant='h5'>AROUND THE WEB</Typography>
-        <Typography variant='h5'> URGENT</Typography>
-      </Typography>
-      <Divider />
-      <Typography
-        variant='h5'
-        className={classes.temp1}
-        style={{ marginLeft: '-5%' }}
-      >
-        <Typography style={{ marginLeft: '2%' }}>
-          <Typography variant='h5'>Silicon Institute of Technology</Typography>
-          <Typography variant='h5'>Bhubaneswar-751024, India</Typography>
-        </Typography>
-        <span style={{ marginLeft: '14%' }}>
-          <LinkedInIcon fontSize='large' />
-          <GitHubIcon fontSize='large' />
-          <FacebookIcon fontSize='large' />
-          <InstagramIcon fontSize='large' />
-        </span>
-
-        <span
-          style={{
-            display: 'flex',
-            flexWrap: 'wrap',
-            justifyContent: 'space-around',
-            overflow: 'hidden',
-            marginLeft: '14%'
-          }}
+    <Card className={classes.card}>
+      <CardContent>
+        <Typography
+          variant='h3'
+          className={classes.title}
+          style={{ color: '#fff' }}
         >
-          <PhoneIphoneIcon fontSize='large' />
-          <WhatsAppIcon fontSize='large' />
-          <Typography variant='h5'>+917992302811</Typography>
-        </span>
-      </Typography>
-
-      <EmailIcon
-        fontSize='large'
-        style={{ color: '#fff', marginLeft: '80%' }}
-      />
-      <Typography
-        style={{ marginTop: '-2.3%', marginLeft: '83%', color: '#fff' }}
-        variant='h6'
-      >
-        rahul080924@outlook.com
-      </Typography>
-    </Paper>
+          ABOUT
+        </Typography>
+        <Typography
+          variant='h6'
+          style={{ color: '#fff', marginLeft: '24%', marginRight: '24%' }}
+        >
+          I am a final year student pursuing BTech in Computer Science and
+          Engineering
+        </Typography>
+        <Typography
+          variant='h6'
+          style={{ color: '#fff', marginLeft: '24%', marginRight: '24%' }}
+        >
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio
+          corporis consequuntur eaque quod, quisquam quidem impedit magni ut cum
+          ullam eius sunt atque nulla! Ullam repudiandae tempora voluptate
+          reprehenderit omnis.
+        </Typography>
+      </CardContent>
+      <CardActions>
+        <Button
+          variant='contained'
+          color='default'
+          className={classes.btn}
+          startIcon={<GetAppIcon />}
+          href='https://drive.google.com/open?id=1UzGFDZ-QydWgsPHeIPyw9k4mB14j-soh'
+          target='_blank'
+        >
+          Have a look at my Resume
+        </Button>
+      </CardActions>
+    </Card>
   );
 }
