@@ -114,7 +114,7 @@ export default function Contact() {
               color='default'
               className={classes.btn}
               startIcon={<GetAppIcon />}
-              href='https://drive.google.com/open?id=1UzGFDZ-QydWgsPHeIPyw9k4mB14j-soh'
+              href='https://drive.google.com/file/d/149MQ6ISV0Pj_BWUfLRhnZOnAtk-bCQ_M/view'
               target='_blank'
             >
               Have a look at my Resume
