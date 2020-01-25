@@ -10,6 +10,7 @@ import PhoneIphoneIcon from '@material-ui/icons/PhoneIphone';
 import WhatsAppIcon from '@material-ui/icons/WhatsApp';
 import EmailIcon from '@material-ui/icons/Email';
 import Grid from '@material-ui/core/Grid';
+import '../App.css';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -77,10 +78,10 @@ export default function Contact() {
                 style={{ color: '#fff' }}
                 target='_blank'
               >
-                <GitHubIcon fontSize='large' />
+                <GitHubIcon fontSize='large' className='class2' />
               </a>
               <a href='#' style={{ color: '#fff' }} target='_blank'>
-                <FacebookIcon fontSize='large' />
+                <FacebookIcon fontSize='large' className='class2' />
               </a>
 
               <a
@@ -88,10 +89,10 @@ export default function Contact() {
                 target='_blank'
                 style={{ color: '#fff' }}
               >
-                <LinkedInIcon fontSize='large' />
+                <LinkedInIcon fontSize='large' className='class2' />
               </a>
               <a href='#' style={{ color: '#fff' }} target='_blank'>
-                <InstagramIcon fontSize='large' />
+                <InstagramIcon fontSize='large' className='class2' />
               </a>
             </span>
           </Paper>
