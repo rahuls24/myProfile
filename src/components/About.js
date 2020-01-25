@@ -76,9 +76,9 @@ export default function Contact() {
           <Typography
             variant='h5'
             className={classes.title}
-            style={{ color: '#fff', marginTop: '1%' }}
+            style={{ color: '#fff', marginTop: '1%', marginLeft: '1.7%' }}
           >
-            Hey ! Time for a Quick Introduction.
+            A Quick Introduction !
           </Typography>
         </Grid>
       </Grid>
