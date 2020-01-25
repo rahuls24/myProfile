@@ -73,7 +73,7 @@ export default function Contact() {
             <Typography variant='h5'> AROUND THE WEB</Typography>
             <span style={{}}>
               <a
-                href='https://github.com/'
+                href='https://github.com/rahuls24'
                 style={{ color: '#fff' }}
                 target='_blank'
               >
