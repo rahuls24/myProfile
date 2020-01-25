@@ -90,7 +90,7 @@ export default function Contact() {
       >
         <Grid item xs={12} sm={6}>
           <Paper className={classes.paper} style={{ marginTop: '1%' }}>
-            <Typography variant='subtitle1' style={{ marginLeft: '10%' }}>
+            <Typography variant='subtitle1'>
               I am a final year student pursuing BTech in Computer Science and
               Engineering.Development and Travelling kept exciting me always.
             </Typography>
@@ -98,7 +98,7 @@ export default function Contact() {
         </Grid>
         <Grid item xs={12} sm={6}>
           <Paper className={classes.paper} style={{ marginTop: '1%' }}>
-            <Typography variant='subtitle1' style={{}}>
+            <Typography variant='subtitle1'>
               I employ whatever knowledge I have in solving problems around me.
               I like getting hands dirty with cool technologies and simplifying
               lives...

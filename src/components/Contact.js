@@ -72,10 +72,27 @@ export default function Contact() {
           <Paper className={classes.paper}>
             <Typography variant='h5'> AROUND THE WEB</Typography>
             <span style={{}}>
-              <LinkedInIcon fontSize='large' />
-              <GitHubIcon fontSize='large' />
-              <FacebookIcon fontSize='large' />
-              <InstagramIcon fontSize='large' />
+              <a
+                href='https://github.com/'
+                style={{ color: '#fff' }}
+                target='_blank'
+              >
+                <GitHubIcon fontSize='large' />
+              </a>
+              <a href='#' style={{ color: '#fff' }} target='_blank'>
+                <FacebookIcon fontSize='large' />
+              </a>
+
+              <a
+                href='https://www.linkedin.com/in/rahuls24/'
+                target='_blank'
+                style={{ color: '#fff' }}
+              >
+                <LinkedInIcon fontSize='large' />
+              </a>
+              <a href='#' style={{ color: '#fff' }} target='_blank'>
+                <InstagramIcon fontSize='large' />
+              </a>
             </span>
           </Paper>
         </Grid>
